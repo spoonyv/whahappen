@@ -7,6 +7,21 @@ document.addEventListener('mousemove', (e) => {
     gradientBg.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+// Copy to clipboard function for tip jar
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        const hint = element.querySelector('.copy-hint');
+        const originalText = hint.textContent;
+        hint.textContent = 'copied!';
+        element.classList.add('copied');
+
+        setTimeout(() => {
+            hint.textContent = originalText;
+            element.classList.remove('copied');
+        }, 2000);
+    });
+}
+
 // Add entrance animations
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.app-card');

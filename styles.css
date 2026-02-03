@@ -235,6 +235,104 @@ body {
     color: var(--accent);
 }
 
+.tip-jar {
+    margin-bottom: 60px;
+}
+
+.tip-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.tip-card:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tip-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tip-icon {
+    font-size: 1.2rem;
+}
+
+.tip-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.tip-qr {
+    width: 120px;
+    height: 0;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.tip-card:hover .tip-qr {
+    height: 120px;
+    opacity: 1;
+}
+
+.tip-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    max-width: 100%;
+}
+
+.tip-address:hover {
+    background: rgba(124, 58, 237, 0.2);
+}
+
+.tip-address code {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    word-break: break-all;
+    text-align: center;
+}
+
+.tip-address .copy-hint {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.tip-address:hover .copy-hint {
+    color: var(--accent);
+}
+
+.tip-address.copied .copy-hint {
+    color: #22c55e;
+}
+
 .footer {
     text-align: center;
     padding-top: 40px;
@@ -272,5 +370,26 @@ body {
     .social-link {
         padding: 10px 16px;
         font-size: 0.85rem;
+    }
+
+    .tip-cards {
+        gap: 16px;
+    }
+
+    .tip-card {
+        padding: 20px;
+        min-width: 160px;
+    }
+
+    .tip-qr {
+        width: 100px;
+    }
+
+    .tip-card:hover .tip-qr {
+        height: 100px;
+    }
+
+    .tip-address code {
+        font-size: 0.7rem;
     }
 }
