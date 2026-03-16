@@ -36,7 +36,7 @@ Add a new `<a class="app-card">` inside the `.apps-grid` div in `index.html`:
 1. Choose a fitting emoji for `app-icon`
 2. Use the deployed URL (Vercel or Netlify)
 3. Keep the app name short and descriptive
-4. Add the card before the closing `</div>` of `.apps-grid`
+4. Add the card at the **top** of `.apps-grid` (newest first)
 5. Commit with message: `Add [App Name] to apps grid`
 
 ## Design Notes
